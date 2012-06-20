@@ -1,0 +1,1101 @@
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB instoreapp['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+  MONGODB instoreapp['$cmd'].find({"authenticate"=>1, "user"=>"shiva", "nonce"=>"5cced6a26cca8c3c", "key"=>"47af194cf716ea2ddddc51ac0cd65136"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jun 21 00:09:05 +0530 2012
+  Processing by UserController#join as HTML
+  MONGODB instoreapp['users'].find({:name=>nil}, {}).limit(-1)
+Rendered user/join.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 613ms (Views: 113.0ms)
+
+
+Started GET "/register/" for 127.0.0.1 at Thu Jun 21 00:09:30 +0530 2012
+  Processing by UserController#register as HTML
+Rendered user/register.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 123ms (Views: 121.0ms)
+
+
+Started POST "/user/new/" for 127.0.0.1 at Thu Jun 21 00:09:39 +0530 2012
+  Processing by UserController#new as HTML
+  Parameters: {"name"=>"sdf", "authenticity_token"=>"2QgHCvm+DDZB95Cd2skzxDWBbQxVZfmP9cyiXtu3O7E=", "imgurl"=>"df", "password"=>"[FILTERED]"}
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({"user_id"=>"4fe218ecc9f277024c000001"}, {})
+  MONGODB instoreapp['users'].insert([{"name"=>"sdf", "_id"=>"4fe218ecc9f277024c000001", "imgurl"=>"http://df", "password"=>"4a8a9fc31dc15a4b87bb145b05db3ae0bf2333e4"}])
+Redirected to http://localhost:3000/chat/
+Completed 302 Found in 1709ms
+
+
+Started GET "/chat/" for 127.0.0.1 at Thu Jun 21 00:09:41 +0530 2012
+  Processing by ChatController#index as HTML
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Rendered chat/index.html.erb within layouts/application (400.0ms)
+Completed 200 OK in 1649ms (Views: 501.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:09:47 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (345.0ms)
+Completed 200 OK in 1270ms (Views: 396.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:09:50 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1264ms (Views: 460.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:09:53 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1347ms (Views: 462.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:09:56 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (342.0ms)
+Completed 200 OK in 1318ms (Views: 462.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:09:59 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (352.0ms)
+Completed 200 OK in 1314ms (Views: 507.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:02 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (371.0ms)
+Completed 200 OK in 1291ms (Views: 480.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:05 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1594ms (Views: 456.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:08 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (351.0ms)
+Completed 200 OK in 1263ms (Views: 461.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:11 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (346.0ms)
+Completed 200 OK in 1302ms (Views: 454.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:14 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1350ms (Views: 456.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:17 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1273ms (Views: 477.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:20 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1317ms (Views: 467.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:23 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (354.0ms)
+Completed 200 OK in 1375ms (Views: 462.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:26 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (354.0ms)
+Completed 200 OK in 1289ms (Views: 485.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:29 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (351.0ms)
+Completed 200 OK in 1301ms (Views: 458.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:32 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (353.0ms)
+Completed 200 OK in 1511ms (Views: 460.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:35 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (343.0ms)
+Completed 200 OK in 1321ms (Views: 467.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:38 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1316ms (Views: 474.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:10:41 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (1902.0ms)
+Completed 200 OK in 21912ms (Views: 2007.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:03 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 2072ms (Views: 449.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:05 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (346.0ms)
+Completed 200 OK in 1292ms (Views: 451.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:07 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (364.0ms)
+Completed 200 OK in 1390ms (Views: 470.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:08 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (344.0ms)
+Completed 200 OK in 1267ms (Views: 444.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:10 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (361.0ms)
+Completed 200 OK in 1316ms (Views: 478.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:11 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (346.0ms)
+Completed 200 OK in 1499ms (Views: 454.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:13 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1295ms (Views: 456.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:15 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1231ms (Views: 452.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:16 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1548ms (Views: 451.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:18 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1557ms (Views: 537.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:19 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (353.0ms)
+Completed 200 OK in 1420ms (Views: 462.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:21 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (342.0ms)
+Completed 200 OK in 1500ms (Views: 391.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:23 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (342.0ms)
+Completed 200 OK in 1306ms (Views: 446.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:24 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1234ms (Views: 470.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:26 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1347ms (Views: 458.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:29 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (352.0ms)
+Completed 200 OK in 1249ms (Views: 448.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:32 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (345.0ms)
+Completed 200 OK in 1192ms (Views: 396.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:35 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1331ms (Views: 448.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:38 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1303ms (Views: 454.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:41 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (352.0ms)
+Completed 200 OK in 1312ms (Views: 457.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:44 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (544.0ms)
+Completed 200 OK in 1461ms (Views: 649.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:47 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (372.0ms)
+Completed 200 OK in 1429ms (Views: 552.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:50 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (353.0ms)
+Completed 200 OK in 1348ms (Views: 464.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:53 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (357.0ms)
+Completed 200 OK in 1312ms (Views: 470.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:56 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1292ms (Views: 452.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:11:59 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (352.0ms)
+Completed 200 OK in 1309ms (Views: 464.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:02 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1307ms (Views: 458.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:05 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (351.0ms)
+Completed 200 OK in 1301ms (Views: 453.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:08 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1229ms (Views: 452.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:11 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1317ms (Views: 453.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:14 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1301ms (Views: 454.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:17 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1309ms (Views: 459.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:20 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1300ms (Views: 455.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:23 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (346.0ms)
+Completed 200 OK in 1716ms (Views: 547.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:26 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (357.0ms)
+Completed 200 OK in 1318ms (Views: 503.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:29 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1337ms (Views: 488.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:32 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (363.0ms)
+Completed 200 OK in 1942ms (Views: 972.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:35 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (344.0ms)
+Completed 200 OK in 1139ms (Views: 386.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:38 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1546ms (Views: 453.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:41 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1527ms (Views: 454.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:44 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1293ms (Views: 451.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:47 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1314ms (Views: 457.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:50 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1506ms (Views: 451.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:53 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1300ms (Views: 453.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:56 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (346.0ms)
+Completed 200 OK in 1305ms (Views: 450.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:12:59 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (353.0ms)
+Completed 200 OK in 1548ms (Views: 469.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:02 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (366.0ms)
+Completed 200 OK in 1362ms (Views: 476.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:05 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (353.0ms)
+Completed 200 OK in 1334ms (Views: 476.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:08 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (351.0ms)
+Completed 200 OK in 1357ms (Views: 449.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:11 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (351.0ms)
+Completed 200 OK in 1324ms (Views: 459.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:14 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (345.0ms)
+Completed 200 OK in 1246ms (Views: 404.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:17 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (354.0ms)
+Completed 200 OK in 1576ms (Views: 467.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:20 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1307ms (Views: 455.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:23 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (345.0ms)
+Completed 200 OK in 1427ms (Views: 407.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:27 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (351.0ms)
+Completed 200 OK in 1441ms (Views: 455.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:29 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (353.0ms)
+Completed 200 OK in 1236ms (Views: 476.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:32 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (346.0ms)
+Completed 200 OK in 1202ms (Views: 396.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:35 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1564ms (Views: 510.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:38 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (355.0ms)
+Completed 200 OK in 1266ms (Views: 505.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:41 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (353.0ms)
+Completed 200 OK in 1307ms (Views: 489.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:44 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (364.0ms)
+Completed 200 OK in 1581ms (Views: 486.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:47 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (389.0ms)
+Completed 200 OK in 1263ms (Views: 503.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:51 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (343.0ms)
+Completed 200 OK in 1143ms (Views: 385.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:53 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1396ms (Views: 465.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:56 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1256ms (Views: 459.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:13:59 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1284ms (Views: 463.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:02 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (637.0ms)
+Completed 200 OK in 1451ms (Views: 684.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:05 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (355.0ms)
+Completed 200 OK in 1355ms (Views: 462.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:08 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1306ms (Views: 452.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:11 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1274ms (Views: 457.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:14 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (346.0ms)
+Completed 200 OK in 1230ms (Views: 415.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:17 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1284ms (Views: 464.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:20 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1307ms (Views: 455.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:23 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (346.0ms)
+Completed 200 OK in 1308ms (Views: 411.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:26 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (344.0ms)
+Completed 200 OK in 1229ms (Views: 407.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:29 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1318ms (Views: 461.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:32 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1296ms (Views: 462.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:35 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1318ms (Views: 456.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:38 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1298ms (Views: 454.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:41 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (351.0ms)
+Completed 200 OK in 1516ms (Views: 453.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:44 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1306ms (Views: 453.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:47 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (356.0ms)
+Completed 200 OK in 1315ms (Views: 465.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:50 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (341.0ms)
+Completed 200 OK in 1281ms (Views: 390.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:53 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1351ms (Views: 483.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:56 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (370.0ms)
+Completed 200 OK in 1411ms (Views: 537.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:14:59 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1553ms (Views: 460.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:02 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (348.0ms)
+Completed 200 OK in 1296ms (Views: 452.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:05 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (347.0ms)
+Completed 200 OK in 1167ms (Views: 401.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:08 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (342.0ms)
+Completed 200 OK in 1470ms (Views: 383.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:11 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (344.0ms)
+Completed 200 OK in 1275ms (Views: 404.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:14 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (417.0ms)
+Completed 200 OK in 1364ms (Views: 565.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:17 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (351.0ms)
+Completed 200 OK in 1473ms (Views: 464.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:20 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (350.0ms)
+Completed 200 OK in 1328ms (Views: 458.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:23 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (345.0ms)
+Completed 200 OK in 1254ms (Views: 470.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:26 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (344.0ms)
+Completed 200 OK in 1384ms (Views: 429.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:29 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (342.0ms)
+Completed 200 OK in 1215ms (Views: 412.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:32 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (344.0ms)
+Completed 200 OK in 1165ms (Views: 385.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:35 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (349.0ms)
+Completed 200 OK in 1571ms (Views: 456.0ms)
+
+
+Started POST "/message/all/" for 127.0.0.1 at Thu Jun 21 00:15:38 +0530 2012
+  Processing by MessageController#all as */*
+  MONGODB instoreapp['users'].find({:name=>"sdf"}, {}).limit(-1)
+  MONGODB instoreapp['system.indexes'].insert([{:unique=>false, :ns=>"instoreapp.messages", :key=>{"user_id"=>1}, :name=>"user_id_1"}])
+  MONGODB instoreapp['messages'].find({}, {}).sort([[:date, :asc]])
+Rendered message/_allMessages.html.erb (344.0ms)
+Completed 200 OK in 1166ms (Views: 394.0ms)

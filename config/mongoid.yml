@@ -1,0 +1,15 @@
+defaults: &defaults
+  host: flame.mongohq.com
+  port: 27027
+  username: shiva
+  password: shiva
+  database: instoreapp
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
