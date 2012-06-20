@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,7 +10,9 @@ gem 'rails', '3.0.0'
 # Mongo adapter configuration
 gem 'mongo'
 gem 'bson_ext'
-gem 'mongoid', '2.0.0.beta.9'
+gem 'mongoid'
+
+gem 'thin'
 
 # Use unicorn as the web server
 # gem 'unicorn'
