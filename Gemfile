@@ -8,9 +8,9 @@ gem 'rails'
 #gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Mongo adapter configuration
-gem 'mongo'
-gem 'bson_ext'
 gem 'mongoid'
+gem 'mongo', '1.6.2'
+gem 'bson_ext'
 
 gem 'thin'
 
